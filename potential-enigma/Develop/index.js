@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
+const generateReadme = require('./template.js');
 
 // TODO: Create an array of questions for user input
 const questions = [{ //name of project 
@@ -27,13 +28,13 @@ const questions = [{ //name of project
     },
     { //table of contents
         type: 'input',
-        name: 'table of contents',
-        message: '?'
+        name: 'toc',
+        message: 'Enter your table of contents'
     },
     { //installation
         type: 'input',
         name: 'installation',
-        message: ''
+        message: 'Please enter your installation section.'
     },
     { //usage
         type: 'input',
@@ -48,16 +49,16 @@ const questions = [{ //name of project
     { //contribution
         type: 'input',
         name: 'contribution',
-        message: '',
+        message: 'Please enter your contribution section',
     },
     { //tests
         type: 'input',
         name: 'tests',
-        message: ''
+        message: 'Please enter your tests section'
     },
     { //questions
         type: 'input',
-        message: '',
+        message: 'Please enter your question section',
         name: 'questions',
     },
     { //github username
@@ -88,11 +89,34 @@ function writeToFile(fileName, data) {
     });
 }
 
+// Where the app starts running
+// Where we start calling function
+inquirer.prompt(questions).then(function(data) {
+    const filename =
+        data.name
+        .toLowerCase()
+        .split(' ')
+        .join('') + '.MD';
+
+    console.log(data);
+
+    var readme = generateReadme(data);
+    console.log(readme);
+
+    fs.writeFile(filename, readme, function(err) {
+        if (err) {
+            return console.log(err);
+        }
+
+        console.log('Success!');
+    });
+});
+
 //look at 09 activity 1.
 
 // TODO: Create a function to initialize app
-function init() {}
+//function init() {}
 // 09 activity 2 
 
 // Function call to initialize app
-init();
+//init();
