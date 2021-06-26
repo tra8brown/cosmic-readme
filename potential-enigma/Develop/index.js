@@ -42,9 +42,10 @@ const questions = [{ //name of project
         message: 'Enter project instructions'
     },
     { //license
-        type: 'input',
+        type: 'checkbox',
         name: 'license',
-        message: 'Choose licensing used for the project used.'
+        message: 'Choose licensing used for the project used.',
+        choices: ['MIT', 'Apache', 'BSD', 'CC', 'ECL', 'WTFPL', 'ISC']
     },
     { //contribution
         type: 'input',
@@ -75,7 +76,7 @@ const questions = [{ //name of project
     { //email address
         type: 'input',
         message: 'What is your email address?',
-        name: 'email address'
+        name: 'email'
     }
 ];
 
