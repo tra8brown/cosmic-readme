@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-const generateReadme = require('./template.js');
+const generateReadme = require('./generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 const questions = [{ //name of project 
@@ -29,7 +29,7 @@ const questions = [{ //name of project
     { //table of contents
         type: 'input',
         name: 'toc',
-        message: 'Enter your table of contents'
+        message: 'Enter your table of contents.'
     },
     { //installation
         type: 'input',
@@ -39,27 +39,27 @@ const questions = [{ //name of project
     { //usage
         type: 'input',
         name: 'usage',
-        message: 'Enter project instructions'
+        message: 'Enter project instructions.'
     },
     { //license
         type: 'checkbox',
         name: 'license',
         message: 'Choose licensing used for the project used.',
-        choices: ['MIT', 'Apache', 'BSD', 'CC', 'ECL', 'WTFPL', 'ISC']
+        choices: ['MIT', 'WTFPL', 'ISC']
     },
     { //contribution
         type: 'input',
         name: 'contribution',
-        message: 'Please enter your contribution section',
+        message: 'Please enter your contribution section.',
     },
     { //tests
         type: 'input',
         name: 'tests',
-        message: 'Please enter your tests section'
+        message: 'Please enter your tests section.'
     },
     { //questions
         type: 'input',
-        message: 'Please enter your question section',
+        message: 'Please enter your question section.',
         name: 'questions',
     },
     { //github username
@@ -109,7 +109,7 @@ inquirer.prompt(questions).then(function(data) {
             return console.log(err);
         }
 
-        console.log('Success!');
+        console.log('Your README markdown file has been created!');
     });
 });
 
