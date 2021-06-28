@@ -33,19 +33,22 @@ function renderLicenseSection(license) {}
 // }
 
 module.exports = generateMarkdown = (data) => {
-    return `# Project Name: ${data.name}\n` +
-        `## Project Description: ${data.description}\n` +
-        `### Table Of Contents:\n` +
+    // wrote in rage post ice cream
+    return `# Project: ${data.name}\n` +
+        `## Project Description:` + `\n${data.description}\n` +
+        `## Table of Contents: \n` +
         `1. [Installation](#installation)\n` +
-        `2. [License](#license)\n` +
-        `3. [Usage](#usage)\n` +
-        `4. [Contribution](#contribution)\n` +
-        `5. [Questions](#questions)\n` +
-        `## Installation: ${data.installation}\n` +
-        `## License: ${renderLicenseBadge(data.license[0])}\n` +
-        `#### Usage: ${data.usage}\n` +
-        `#### Contribution: ${data.contribution}\n` +
-        `#### Questions: ${data.questions}\n` +
-        `## You can email me @ ${data.email}\n` +
-        `## My github is www.github.com/${data.username}\n`;
+        `2. [Usage](#usage)\n` +
+        `3. [License](#license)\n` +
+        `4. [Contributions](#contributions)\n` +
+        `5. [Tests](#tests)\n` +
+        `6. [Questions](#questions)\n` +
+        `## Installation:` + `\n${data.installation}\n` +
+        `## Usage:` + `\n ${data.usage}\n` +
+        `## License:` + `\n ${renderLicenseBadge(data.license[0])}\n` +
+        `## Contributions:` + `\n ${data.contribution}\n` +
+        `## Tests: ` + `\n${data.tests}\n` +
+        `## Questions: ` + `\n${data.questions}\n` +
+        `#### You can find me on github @ http://www.github.com/${data.username}\n` +
+        `#### You can email me @ ${data.email}\n`;
 };
