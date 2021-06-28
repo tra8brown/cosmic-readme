@@ -33,9 +33,9 @@ function renderLicenseSection(license) {}
 // }
 
 module.exports = generateMarkdown = (data) => {
-    return `#### Project Name: ${data.name}\n` +
-        `#### Project Description: ${data.description}\n` +
-        `#### Table Of Contents:\n` +
+    return `# Project Name: ${data.name}\n` +
+        `## Project Description: ${data.description}\n` +
+        `### Table Of Contents:\n` +
         `1. [Installation](#installation)\n` +
         `2. [License](#license)\n` +
         `3. [Usage](#usage)\n` +
@@ -43,9 +43,9 @@ module.exports = generateMarkdown = (data) => {
         `5. [Questions](#questions)\n` +
         `## Installation: ${data.installation}\n` +
         `## License: ${renderLicenseBadge(data.license[0])}\n` +
-        `## Usage: ${data.usage}\n` +
-        `## Contribution: ${data.contribution}\n` +
-        `## Questions: ${data.questions}\n` +
-        `#### You can email me @ ${data.email}\n` +
-        `#### My github is www.github.com/${data.username}\n`;
+        `#### Usage: ${data.usage}\n` +
+        `#### Contribution: ${data.contribution}\n` +
+        `#### Questions: ${data.questions}\n` +
+        `## You can email me @ ${data.email}\n` +
+        `## My github is www.github.com/${data.username}\n`;
 };
