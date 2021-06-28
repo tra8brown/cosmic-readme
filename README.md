@@ -3,7 +3,7 @@
 * I've created a video of the typical user flow of the application.
 * This was a little bit challenging for me due to it being a lot of files to work with from the beginning and navigating my way around all the files. I ended up cleaning up the files I didn't really need and I felt  about starting and finishing the project. I dont know if I have any future implementations I can think of at the moment with this but I know there is always room for improvement.
 
-![gif walkthrough](.gif.gif)
+![walkthrough video](./gif.gif)
 __walkthrough video__
 https://drive.google.com/file/d/1Gqk53atkme7gMgRhzWsgIIxW9zuKNLbv/view
 
