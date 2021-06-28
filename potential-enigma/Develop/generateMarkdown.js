@@ -1,6 +1,3 @@
-const fs = require('fs')
-
-
 function renderLicenseBadge(license) {
     if (!license) {
         return '';
@@ -16,6 +13,7 @@ function renderLicenseBadge(license) {
     return ``;
 }
 
+// wrote pre ice cream. yay
 // README template
 module.exports = data => {
     return `# Project: ${data.name}\n` +
